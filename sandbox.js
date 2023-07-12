@@ -1,7 +1,5 @@
 // Home Page: Start
 
-
-let name = document.getElementById('name');
 let username = document.getElementById('username');
 let email = document.getElementById('email');
 let password = document.getElementById('password');
@@ -78,3 +76,33 @@ close.addEventListener('click', () => {
 })
 
 // Burger End
+
+// input Start
+
+const name = document.querySelectorAll('#name');
+const outName = document.querySelector('#inName');
+const submit = document.querySelector('#pop-sub')
+
+
+submit.addEventListener('click', () => {
+  
+  if( name.value === ""){
+    alert("Enter Name")
+    return
+ }else{
+    // name.value = ""
+ }
+
+  let arr = [
+    {
+      name: name.value,
+    }
+  ]
+
+  console.log(arr.name);
+
+  outName.innerHTML = arr[0].name
+
+})
+
+// input End
