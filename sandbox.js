@@ -30,11 +30,6 @@ document.addEventListener("mousemove", function (e) {
   cursor.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
 });
 
-var cursor2 = document.querySelector(".cursor2");
-
-document.addEventListener("mousemove", function (e) {
-  cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
-});
 
 
 let search = document.querySelector('.search');
@@ -79,19 +74,12 @@ close.addEventListener('click', () => {
 
 // input Start
 
-const name = document.querySelectorAll('#name');
+const name = document.querySelectorAll('#username');
 const outName = document.querySelector('#inName');
 const submit = document.querySelector('#pop-sub')
 
 
 submit.addEventListener('click', () => {
-  
-  if( name.value === ""){
-    alert("Enter Name")
-    return
- }else{
-    // name.value = ""
- }
 
   let arr = [
     {
@@ -99,9 +87,7 @@ submit.addEventListener('click', () => {
     }
   ]
 
-  console.log(arr.name);
-
-  outName.innerHTML = arr[0].name
+  outName.innerHTML = name[0].value
 
 })
 

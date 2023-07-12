@@ -702,7 +702,7 @@
   width: 100%;
   height: 100vh;
   position: fixed;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 100;
@@ -1844,3 +1844,14 @@
   background-color: rgb(251, 4, 53);
 }
 /* Warning Page: End*/
+
+
+/* */
+
+#inName{
+  font-size: 25px;
+  text-decoration: underline;
+}
+#nameput{
+  
+}
