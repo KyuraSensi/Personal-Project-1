@@ -1,8 +1,5 @@
 // Home Page: Start
 
-let username = document.getElementById('username');
-let email = document.getElementById('email');
-let password = document.getElementById('password');
 let popSubmit = document.getElementById('pop-sub')
 
 let join = document.querySelector('.join-us');
@@ -23,6 +20,8 @@ const popBtn = document.getElementById("pop-btn");
 popBtn.addEventListener('click', () => {
     popup.style.display = "none";
 })
+
+
 
 var cursor = document.querySelector(".cursor");
 
@@ -75,8 +74,12 @@ close.addEventListener('click', () => {
 // input Start
 
 const name = document.querySelectorAll('#username');
+const nameN = document.querySelectorAll('#name');
+const email = document.querySelectorAll('#email');
+const password = document.querySelectorAll('#password');
 const outName = document.querySelector('#inName');
-const submit = document.querySelector('#pop-sub')
+const submit = document.querySelector('#pop-sub');
+const enter = document.querySelector('#fill');
 
 
 submit.addEventListener('click', () => {
@@ -87,8 +90,24 @@ submit.addEventListener('click', () => {
     }
   ]
 
-  outName.innerHTML = name[0].value
-
+  if(nameN[0].value === ''){
+    fill.style.display = 'block'
+      fill.innerHTML = 'Please Enter All Fields'
+    } else if(name[0].value === ''){
+    fill.style.display = 'block'
+      fill.innerHTML = 'Please Enter All Fields'
+  } else if(email[0].value === ''){
+  fill.stsyle.display = 'block'
+    fill.innerHTML = 'Please Enter All Fields'
+  } else if(password[0].value === ''){
+    fill.style.display = 'block'
+      fill.innerHTML = 'Please Enter All Fields'
+    } else {
+      fill.style.display = 'none'
+      popup.style.display = 'none'
+      
+    } 
+    outName.innerHTML = name[0].value
 })
 
 // input End
