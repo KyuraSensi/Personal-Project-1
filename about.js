@@ -1,9 +1,5 @@
 // Sign up Pop up: START
 
-let name = document.getElementById('name');
-let username = document.getElementById('username');
-let email = document.getElementById('email');
-let password = document.getElementById('password');
 let popSubmit = document.getElementById('pop-sub')
 
 let join = document.querySelector('.join-us');
@@ -28,11 +24,6 @@ document.addEventListener("mousemove", function (e) {
   cursor.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
 });
 
-var cursor2 = document.querySelector(".cursor2");
-
-document.addEventListener("mousemove", function (e) {
-  cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
-});
 
 
 let search = document.querySelector('.search');
@@ -75,3 +66,44 @@ close.addEventListener('click', () => {
 })
 
 // Burger End
+
+// input Start
+
+const name = document.querySelectorAll('#username');
+const nameN = document.querySelectorAll('#name');
+const email = document.querySelectorAll('#email');
+const password = document.querySelectorAll('#password');
+const outName = document.querySelector('#inName');
+const submit = document.querySelector('#pop-sub');
+const enter = document.querySelector('#fill');
+
+
+submit.addEventListener('click', () => {
+
+  let arr = [
+    {
+      name: name.value,
+    }
+  ]
+
+  if(nameN[0].value === ''){
+    fill.style.display = 'block'
+      fill.innerHTML = 'Please Enter All Fields'
+    } else if(name[0].value === ''){
+    fill.style.display = 'block'
+      fill.innerHTML = 'Please Enter All Fields'
+  } else if(email[0].value === ''){
+  fill.stsyle.display = 'block'
+    fill.innerHTML = 'Please Enter All Fields'
+  } else if(password[0].value === ''){
+    fill.style.display = 'block'
+      fill.innerHTML = 'Please Enter All Fields'
+    } else {
+      fill.style.display = 'none'
+      popup.style.display = 'none'
+    } 
+
+    outName.innerHTML = name[0].value
+})
+
+// input End

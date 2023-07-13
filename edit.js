@@ -29,10 +29,7 @@ close.addEventListener('click', () => {
 
 // Sign up Pop up: START
 
-let name = document.getElementById('name');
 let username = document.getElementById('username');
-let email = document.getElementById('email');
-let password = document.getElementById('password');
 let popSubmit = document.getElementById('pop-sub')
 
 let join = document.querySelector('.join-us');
@@ -51,18 +48,21 @@ popBtn.addEventListener('click', () => {
     popup.style.display = "none";
 })
 
+// Sign up Pop up: END
+
+
+// Cursor Start
+
 var cursor = document.querySelector(".cursor");
 
 document.addEventListener("mousemove", function (e) {
   cursor.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
 });
 
-var cursor2 = document.querySelector(".cursor2");
+// Cursor End
 
-document.addEventListener("mousemove", function (e) {
-  cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
-});
 
+// Cursor Start
 
 let search = document.querySelector('.search');
 let searchPop = document.querySelector('.searchPop');
@@ -75,8 +75,9 @@ searchCencel.addEventListener('click', () => {
   searchPop.style.display = 'none'
 })
 
+// Cursor End
 
-// Sign up Pop up: END
+
 
 
 
@@ -258,6 +259,46 @@ results3.innerHTML += show3;
 // Maoped section: END
 
 
+// input Start
+
+const name = document.querySelectorAll('#username');
+const nameN = document.querySelectorAll('#name');
+const email = document.querySelectorAll('#email');
+const password = document.querySelectorAll('#password');
+const outName = document.querySelector('#inName');
+const submit = document.querySelector('#pop-sub');
+const enter = document.querySelector('#fill');
+
+
+submit.addEventListener('click', () => {
+
+  let arr = [
+    {
+      name: name.value,
+    }
+  ]
+
+  if(nameN[0].value === ''){
+    fill.style.display = 'block'
+      fill.innerHTML = 'Please Enter All Fields'
+    } else if(name[0].value === ''){
+    fill.style.display = 'block'
+      fill.innerHTML = 'Please Enter All Fields'
+  } else if(email[0].value === ''){
+  fill.stsyle.display = 'block'
+    fill.innerHTML = 'Please Enter All Fields'
+  } else if(password[0].value === ''){
+    fill.style.display = 'block'
+      fill.innerHTML = 'Please Enter All Fields'
+    } else {
+      fill.style.display = 'none'
+      popup.style.display = 'none'
+    } 
+
+    outName.innerHTML = name[0].value
+})
+
+// input End
 
 
 
